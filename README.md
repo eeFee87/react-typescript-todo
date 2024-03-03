@@ -1,6 +1,7 @@
 # ToDo-App
 
-Pequeño proyecto que se conecta a una api de todos y nos muestra un listado de tareas
+Pequeño proyecto que se conecta a una api de todos y nos muestra un listado de tareas.
+Este proyecto ha sido creado para practicar el uso de TypeScript en un proyecto de React.
 
 ## Deployment
 
