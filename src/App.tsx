@@ -1,24 +1,30 @@
 import { useEffect, useState } from 'react';
+import { Todo } from './components/Todo';
 import './App.css';
 
 interface DataTodo {
-  id: number;
-  todo: string;
-  completed: boolean;
-  userId: number;
+  limit: number;
+  skip: number;
+  todos: {
+    id: number;
+    todo: string;
+    completed: boolean;
+    userId: number;
+  }[];
+  total: number;
 }
 
 export function App(): JSX.Element {
   // const [name, setName] = useState<string>('Fran');
   // const [isActive, setIsActive] = useState<boolean>(false);
-  const [todosList, setTodoList] = useState<DataTodo[]>([]);
+  const [todosList, setTodoList] = useState<DataTodo>();
 
   useEffect(() => {
     async function getTodos() {
       const res = await fetch('https://dummyjson.com/todos');
       const data = await res.json();
-
-      setTodoList(data.todos);
+      console.log(data);
+      setTodoList(data);
     }
     getTodos();
   }, []);
@@ -26,8 +32,14 @@ export function App(): JSX.Element {
   return (
     <>
       <ul>
-        {todosList.map((todo) => {
-          return <li key={todo.id}>{todo.todo}</li>;
+        {todosList?.todos.map((todo) => {
+          return (
+            <Todo
+              key={todo.id}
+              todo={todo.todo}
+              status={todo.completed ? 'active' : 'inactive'}
+            />
+          );
         })}
       </ul>
     </>
