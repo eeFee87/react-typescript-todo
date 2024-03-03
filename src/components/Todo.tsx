@@ -1,15 +1,11 @@
-type TodoStatus = 'active' | 'inactive';
+import { TodoProps } from '../types';
 
-interface TodoProps {
-  todo: string;
-  status?: TodoStatus;
-}
-
-export function Todo({ todo, status }: TodoProps): JSX.Element {
+export function Todo({ todo, status, user }: TodoProps): JSX.Element {
   return (
     <>
       <li>
         <h3>{todo}</h3>
+        <p>user {user}</p>
         <p>{status}</p>
       </li>
       <hr />

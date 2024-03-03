@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# ToDo-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeño proyecto que se conecta a una api de todos y nos muestra un listado de tareas
 
-Currently, two official plugins are available:
+## Deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para desplegar este proyecto, hacer una copia del repositorio.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+  git clone git@github.com:eeFee87/react-typescript-todo.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Desde la carpeta del proyecto instalar todas las dependencias.
+
+```bash
+  npm install
+```
+
+Por último levantar un entorno de desarrollo con el siguiente comando.
+
+```bash
+  npm run dev
+```
+
+En el navegador acceder a http://localhost:5173/ para visualizar la app
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://astro-portfolio-eta.vercel.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fcolorca/)
+[![github](https://img.shields.io/badge/github-333?style=for-the-badge&logo=github&logoColor=)](https://github.com/eeFee87)
